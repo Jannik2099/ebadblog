@@ -1,0 +1,7 @@
+digraph G {
+    graph [bgcolor = transparent;];
+    node [fillcolor = white; style = filled;];
+    main -> parse -> printf;
+    main -> printf;
+    debug;
+}

@@ -1,0 +1,43 @@
+AUTHOR = 'Jannik Glückert'
+SITENAME = 'EBADBLOG'
+SITESUBTITLE = 'A blog about weirdly named POSIX error codes and more'
+SITEURL = ''
+HEADER_COVER = 'images/errno.jpg'
+
+THEME = 'theme/pelican-clean-blog'
+
+PATH = 'content'
+
+TIMEZONE = 'Europe/Berlin'
+
+DEFAULT_LANG = 'en'
+
+COLOR_SCHEME_CSS = 'darkly.css'
+CSS_OVERRIDE = 'css/custom.css'
+DISABLE_CUSTOM_THEME_JAVASCRIPT = True
+
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
+TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
+
+SOCIAL = (
+    ('github', 'https://github.com/Jannik2099'),
+)
+
+DEFAULT_PAGINATION = 10
+
+STATIC_PATHS = ['css', 'images']
+
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.extra': {},
+        'markdown.extensions.meta': {},
+        'markdown.extensions.codehilite': {
+            'guess_lang': 'false',
+            'css_class': 'highlight',
+        },
+    },
+    'output_format': 'html5',
+}

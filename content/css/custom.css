@@ -1,0 +1,16 @@
+details summary {
+    cursor: pointer;
+    font-weight: 550;
+}
+
+details summary:before {
+    content: '► ';
+}
+
+details[open] summary:before {
+    content: '▼ ';
+}
+
+.highlight pre code {
+    white-space: pre;
+}
