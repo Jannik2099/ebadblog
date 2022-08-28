@@ -104,11 +104,11 @@ Similar to how the CPU benefits from seeing control flow ahead of execution, so 
 
 In computer science, Control Flow is represented as a graph. A graph is a mathematical structure consisting of of vertices (also called nodes), individual points representing objects (in this case functions), and edges connecting the nodes (in this case function calls).
 
-![A graph with six vertices and seven edges](images/ibt/graf.svg)
+![A graph with six vertices and seven edges](images/indirect-function-calls-and-control-flow-integrity/graf.svg)
 
 Graphs are one of the most common data structures in all of computer science. There is an entire field of mathematics dedicated to them, called Graph Theory. In the case of control flow, we use a particular subset of graphs called directed graphs. A directed graph (also called digraph) is a graph in which the edges carry a notion of direction. Let's look at a more applicable example, a call graph of a C program.
 
-![A simple call graph](images/ibt/graph_c.svg)
+![A simple call graph](images/indirect-function-calls-and-control-flow-integrity/graph_c.svg)
 
 Immediately we can see a few interesting things:
 
