@@ -249,7 +249,7 @@ The <code>@llvm</code> functions are llvm internals. LLVM uses these functions t
 
 <code>ubsantrap</code> inserts an execution trap that will abort the program, and optionally print some diagnostics before doing so. LLVM calls <code>ubsantrap</code> here to abort when the CFI check fails. Which leads us to...
 
-<code>type.test</code> checks "whether a given pointer is associated with a given type identifier". LLVM achieves this by creating a bitvector representing valid function addresses, although the exact mechanics are very complex and much better described in the [CFI Design Documentation](https://clang.llvm.org/docs/ControlFlowIntegrityDesign.html) and the [LLVM TypeMetadata Documentation](https://llvm.org/docs/TypeMetadata.html).
+<code>type.test</code> checks "whether a given pointer is associated with a given type identifier". LLVM achieves this by creating a bitvector representing valid function addresses, although the exact mechanics are very complex and much better described in the <a href="https://clang.llvm.org/docs/ControlFlowIntegrityDesign.html">CFI Design Documentation</a> and the <a href="https://llvm.org/docs/TypeMetadata.html">LLVM TypeMetadata Documentation</a>.
 
 </details>
 
