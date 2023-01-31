@@ -45,6 +45,7 @@ It is generally recommended to trim the kernel config as much as possible to spe
 The acute observer will have noticed that our file in `/var/lib/libvirt/images/` is, in fact, not a Qemu image in a `.raw` or `.qcow2` format, but a directory structure that resembles a root filesystem.
 
 Indeed we won't use traditional emulated block devices, but `virtiofs`. This has two reasons:
+
 - it's faster, I think
 - we can directly interact and manipulate the image, even when the VM is running
 
@@ -55,11 +56,13 @@ Note: it would be cleaner to expose the filesystem as read-only to the VM to avo
 ## The VM configuration
 
 We need to set up just a few things:
+
 - direct kernel boot
 - the `virtiofs` share (and a required memfd memory backing)
 - the `qemu-guest-agent` socket
 
 We'll also add some extras for comfort:
+
 - A virtio rng device
 - A virtio video device
 - A virtio keyboard input device
