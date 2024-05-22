@@ -5,8 +5,3 @@ name = "pypi"
 
 [packages]
 pelican = {extras = ["markdown"], version = "*"}
-
-[dev-packages]
-
-[requires]
-python_version = "3.7"
