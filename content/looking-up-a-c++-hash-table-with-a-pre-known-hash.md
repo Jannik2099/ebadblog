@@ -79,7 +79,7 @@ struct Hash {
     }
 };
 
-struct Pred {
+struct KeyEqual {
     using is_transparent = void;
 
     bool operator()(std::string_view lhs, std::string_view rhs) const {
@@ -90,7 +90,7 @@ struct Pred {
     }
 };
 
-using Set = std::unordered_set<std::string, Hash, Pred>;
+using Set = std::unordered_set<std::string, Hash, KeyEqual>;
 
 int main() {
     Set set{"foo"};
@@ -131,7 +131,7 @@ struct Hash {
     }
 };
 
-struct Pred {
+struct KeyEqual {
     using is_transparent = void;
 
     bool operator()(std::string_view lhs, std::string_view rhs) const {
@@ -143,7 +143,7 @@ struct Pred {
     }
 };
 
-using Set = std::unordered_set<std::string, Hash, Pred>;
+using Set = std::unordered_set<std::string, Hash, KeyEqual>;
 
 int main() {
     Set set{"foo"};
@@ -155,7 +155,7 @@ int main() {
 }
 ```
 
-You can find a godbolt example [here](https://godbolt.org/z/je15e87z1).
+You can find a godbolt example [here](https://godbolt.org/z/PcKfceT3s).
 
 # Closing remarks
 
